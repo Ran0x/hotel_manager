@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>wuyi</display-name>
+  <servlet>
+    <servlet-name>LoginRegisterServlet</servlet-name>
+    <servlet-class>com.wuyi.sys.servlet.LoginRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginRegisterServlet</servlet-name>
+    <url-pattern>/LoginRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>VerifyServlet</servlet-name>
+    <servlet-class>com.wuyi.sys.servlet.VerifyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyServlet</servlet-name>
+    <url-pattern>/VerifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ForgetServlet</servlet-name>
+    <servlet-class>com.wuyi.sys.servlet.ForgetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgetServlet</servlet-name>
+    <url-pattern>/ForgetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.wuyi.sys.user.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <servlet-name>RoleServlet</servlet-name>
+    <servlet-class>com.wuyi.sys.role.servlet.RoleServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>RoleServlet</servlet-name>
+    <url-pattern>/RoleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <servlet-class>com.wuyi.sys.userInfo.servlet.UserInfoServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <url-pattern>/UserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>signin.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>SessionFilter</filter-name>
+    <filter-class>com.wuyi.filter.SessionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SessionFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+</web-app>
